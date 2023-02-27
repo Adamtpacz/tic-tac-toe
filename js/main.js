@@ -13,8 +13,9 @@ const winCondition = {
 const win1 = ['a1', 'a2', 'a3']
 
 /*----- state variables -----*/
-let squareStatus
+let board = []
 let turn
+let winner
 
 /*----- cached elements  -----*/
 const boardEl = document.querySelector('#board')
