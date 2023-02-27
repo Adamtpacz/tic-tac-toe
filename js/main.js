@@ -1,6 +1,6 @@
 /*----- constants -----*/
 const colors = {
-    Null: '0',
+    Empty: null,
     Player1: '1',
     Player2: '-1'
 }
@@ -28,6 +28,9 @@ const squareEls = document.querySelectorAll('div')
 function init() {
     console.log('starting game')
     render()
+
+    board = [null, null, null, null, null, null, null, null, null]
+
 }
 
 function render() {
