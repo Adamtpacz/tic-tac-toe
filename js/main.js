@@ -6,11 +6,11 @@ const colors = {
 }
 
 const winCondition = {
-    a: ['1', '2', '3']
-    b: ['1', '2', '3']
+    a: ['1', '2', '3'],
+    b: ['1', '2', '3'],
     c: ['1', '2', '3']
 }
-const win1 = ['a1', 'a2', 'a3']
+// console.log(winCondition)
 
 /*----- state variables -----*/
 let board = []
@@ -18,10 +18,11 @@ let turn
 let winner
 
 /*----- cached elements  -----*/
-const boardEl = document.querySelector('#board')
 const squareEls = document.querySelectorAll('div')
+// console.log(squareEls)
 
 /*----- event listeners -----*/
+
 
 /*----- functions -----*/
 function init() {
