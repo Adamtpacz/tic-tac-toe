@@ -27,10 +27,13 @@ const squareEls = document.querySelectorAll('div')
 /*----- functions -----*/
 function init() {
     console.log('starting game')
-    render()
 
+    // initialize state variables
     board = [null, null, null, null, null, null, null, null, null]
-
+    turn = 1
+    winner = null
+    
+    render()
 }
 
 function render() {
