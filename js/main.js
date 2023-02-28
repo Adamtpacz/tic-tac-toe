@@ -1,8 +1,8 @@
 /*----- constants -----*/
 const colors = {
     Null: 'grey',
-    Player1: 'red',
-    Player2: 'blue'
+    PlayerX: 'red',
+    PlayerO: 'blue'
 }
 
 const winCondition = [
@@ -18,13 +18,13 @@ const winCondition = [
 // console.log(winCondition)
 
 /*----- state variables -----*/
-let board = []
+let board
 let turn
 let winner
 
 /*----- cached elements  -----*/
 const squareEls = document.querySelectorAll('div')
-// console.log(squareEls)
+console.log(squareEls)
 
 /*----- event listeners -----*/
 
@@ -49,7 +49,9 @@ function render() {
 
 function renderBoard() {
     console.log('rendering board')
-    
+    squareEls.forEach(function(square){
+        
+    })
 }
 
 init()
