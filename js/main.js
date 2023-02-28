@@ -1,19 +1,19 @@
 /*----- constants -----*/
 const colors = {
-    Null: 'grey',
-    PlayerX: 'red',
-    PlayerO: 'blue'
+    'null': 'grey',
+    '1': 'red',
+    '-1': 'blue'
 }
 
 const winCondition = [
-    [0, 1, 2,],
-    [3, 4, 5,],
-    [6, 7, 8,],
-    [0, 3, 6,],
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
     [1, 4, 7],
     [2, 5, 8],
-    [0, 4, 8,],
-    [2, 4, 6,]
+    [0, 4, 8],
+    [2, 4, 6]
 ]
 // console.log(winCondition)
 
@@ -24,7 +24,7 @@ let winner
 
 /*----- cached elements  -----*/
 const squareEls = document.querySelectorAll('div')
-console.log(squareEls)
+// console.log(squareEls[6])
 
 /*----- event listeners -----*/
 
@@ -49,9 +49,11 @@ function render() {
 
 function renderBoard() {
     console.log('rendering board')
-    squareEls.forEach(function(square){
-        
-    })
+   
+    // assigns the null value for the colors object to start since nothing has been clicked yet
+    for (let i = 0; i < board.length; i++) {
+        squareEls[i].style.backgroundColor = colors[board[i]]
+    }
 }
 
 init()
