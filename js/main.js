@@ -1,15 +1,20 @@
 /*----- constants -----*/
 const colors = {
-    Empty: null,
-    Player1: '1',
-    Player2: '-1'
+    Null: 'grey',
+    Player1: 'red',
+    Player2: 'blue'
 }
 
-const winCondition = {
-    a: ['1', '2', '3'],
-    b: ['1', '2', '3'],
-    c: ['1', '2', '3']
-}
+const winCondition = [
+    [0, 1, 2,],
+    [3, 4, 5,],
+    [6, 7, 8,],
+    [0, 3, 6,],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8,],
+    [2, 4, 6,]
+]
 // console.log(winCondition)
 
 /*----- state variables -----*/
@@ -26,18 +31,25 @@ const squareEls = document.querySelectorAll('div')
 
 /*----- functions -----*/
 function init() {
-    console.log('starting game')
+    console.log('initializing game')
 
     // initialize state variables
     board = [null, null, null, null, null, null, null, null, null]
     turn = 1
     winner = null
     
+    // calling render function
     render()
 }
 
 function render() {
     console.log('rendering game')
+    renderBoard()
+}
+
+function renderBoard() {
+    console.log('rendering board')
+    
 }
 
 init()
