@@ -27,6 +27,13 @@ const squareEls = document.querySelectorAll('div')
 // console.log(squareEls[6])
 
 /*----- event listeners -----*/
+function handleClick(evt) {
+    console.log(evt.target.getAttribute('id'))
+}
+
+squareEls.forEach(function(square) {
+    square.addEventListener('click', handleClick)
+})
 
 
 /*----- functions -----*/
