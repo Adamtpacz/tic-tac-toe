@@ -24,16 +24,22 @@ let winner
 
 /*----- cached elements  -----*/
 const squareEls = document.querySelectorAll('div')
+
 // console.log(squareEls[6])
 
 /*----- event listeners -----*/
 function handleClick(evt) {
-    console.log(evt.target.getAttribute('id'))
+    let event = evt.target
+    // console.log(event.getAttribute('id'))
+    event.style.backgroundColor = colors[turn]
+    turn *= -1
+    // console.log(event)
 }
 
 squareEls.forEach(function(square) {
     square.addEventListener('click', handleClick)
 })
+
 
 
 /*----- functions -----*/
