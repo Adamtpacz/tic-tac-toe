@@ -15,7 +15,6 @@ const winCondition = [
     [0, 4, 8],
     [2, 4, 6]
 ]
-// console.log(winCondition)
 
 /*----- state variables -----*/
 let board
@@ -24,23 +23,20 @@ let winner
 
 /*----- cached elements  -----*/
 const squareEls = document.querySelectorAll('div')
-
-// console.log(squareEls[6])
+const btn = document.querySelector('button')
 
 /*----- event listeners -----*/
 function handleClick(evt) {
     let event = evt.target
-    // console.log(event.getAttribute('id'))
-    event.style.backgroundColor = colors[turn]
-    turn *= -1
-    // console.log(event)
+    if (event.style.backgroundColor === 'grey') {
+        event.style.backgroundColor = colors[turn]
+        turn *= -1
+    }
 }
 
 squareEls.forEach(function(square) {
     square.addEventListener('click', handleClick)
 })
-
-
 
 /*----- functions -----*/
 function init() {
