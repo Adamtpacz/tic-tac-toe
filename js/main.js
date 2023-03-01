@@ -13,6 +13,7 @@ let winner
 /*----- cached elements  -----*/
 const squareEls = document.querySelectorAll('div')
 const btn = document.querySelector('button')
+// console.log(btn)
 
 /*----- event listeners -----*/
 function handleClick(evt) {
@@ -26,6 +27,8 @@ function handleClick(evt) {
 squareEls.forEach(function(square) {
     square.addEventListener('click', handleClick)
 })
+
+btn.addEventListener('click', init)
 
 /*----- functions -----*/
 function init() {
